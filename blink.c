@@ -30,22 +30,6 @@
 #include "smallFunctions.h"
 //=============================================================
 
-// >> Pin HEX names, for convinience.
-/*
- * PIN		HEX
- * 0		0x01
- * 1		0x02
- * 2		0x04
- * 3		0x08
- * 4		0x10
- * 5		0x20
- * 6		0x40
- * 7		0x80
- */
-
-//#define portF (*((volatile unsigned long *) 0x40025000))
-
-//void enablePin()
 
 unsigned int counter;
 
@@ -66,17 +50,12 @@ int main(void)
     	toggle(PortF,(RED_LED+GREEN_LED));
     	if(counter<=10){pinON(PortF,BLUE_LED);}
 
-    	//GPIO_PORTF_DATA_R |= RED_LED+BLUE_LED+GREEN_LED;
-
     	// Delay for a bit, function call to delay, this is a counting while loop.
     	delay(delayTime);
     	toggle(PortF,GREEN_LED);
     	//toggle(PortF,RED_LED+GREEN_LED);
     	counter++;
     	if(counter > 10){pinOFF(PortF,BLUE_LED);}
-    	// Turn off the LED.
-        //GPIO_PORTF_DATA_R &= ~(RED_LED+BLUE_LED);
-    	//delay(delayTime);
      }
 }
 
