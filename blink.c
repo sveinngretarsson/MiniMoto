@@ -18,6 +18,8 @@
 //		By using the on-board LEDs, alot can be learned about
 //		basic pin operations.
 //
+// >> Functions like "toggle" and "delay" can be found in the "smallFunctions.c"
+//		file.
 //=============================================================
 //  Include libraries
 //=============================================================
